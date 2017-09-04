@@ -1,14 +1,4 @@
-FROM alpine:3.1
-
-RUN apk add python3 --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
-RUN apk add python3-dev build-base --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
-
-RUN apk add --update libxslt-dev
-RUN apk add --update libxml2-dev
-RUN apk add git
-
-RUN python3 --version
-RUN pip3 --version
+FROM python:3
 
 RUN git clone https://github.com/cpfair/tapiriik.git
 
